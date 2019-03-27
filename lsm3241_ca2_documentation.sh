@@ -1,7 +1,3 @@
-
-documentation:
-#build yeast and transposon index, also explain why I didn't trim.
-#provide reference to tools used.
 bowtie2-build 'sacCer3.fa,ty5_6p.fa' yeast_trans_index
 
 #alignment of reads to yeast and transposon index:

@@ -1,3 +1,4 @@
+#build combined indices
 bowtie2-build 'sacCer3.fa,ty5_6p.fa' yeast_trans_index
 
 #alignment of reads to yeast and transposon index:

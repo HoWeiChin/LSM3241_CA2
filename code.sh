@@ -23,7 +23,7 @@ grep -i ty5 $F
 
 grep -i ty5 $F | cut -f3,4
 
-grep -i ty5 $F | cut -f3 | uniq -c
+grep -i ty5 $F | cut -f3 | uniq -c > unique_count.txt
 
 #find insert in reverse orientation, with inclusion of new sam flags: read and mate reverse strands
 samtools view -F 1598 sorted_read_align_to_index.sam > reverse_insert.sam

@@ -25,7 +25,15 @@ grep -i ty5 $F | cut -f3,4
 
 grep -i ty5 $F | cut -f3 | uniq -c
 
-grep -i ty5 $F | cut -f3,4 | grep chrXII
+#find insert in reverse orientation, with inclusion of new sam flags: read and mate reverse strands
+samtools view -F 1598 sorted_read_align_to_index.sam > reverse_insert.sam
+
+#perform grep again
+grep -i ty5 reverse_insert.sam > grep_ty5_reverse_insert.sam
+
+#find location of reverse insert:
+cut -f3,4 grep_ty5_reverse_insert.sam
+
 
 
 
